@@ -2,20 +2,16 @@ import React, { useState } from "react";
 import DisplayAlarms from "./alarm";
 import { Switch } from "antd";
 
-function ControlPanel({
-  setToggleAlarm1,
-  setToggleAlarm2,
-  setToggleAlarm3,
-  setToggleAlarm4,
-  setToggleAlarm5,
-  setToggleAlarm6,
-}) {
+function ControlPanel({ props }) {
+  const {
+    setToggleAlarm1,
+    setToggleAlarm2,
+    setToggleAlarm3,
+    setToggleAlarm4,
+    setToggleAlarm5,
+    setToggleAlarm6,
+  } = props;
   const [toggle, setToggle] = useState(false);
-  const [masterToggle, setMasterToggle] = useState(false);
-
-  const masterToggler = () => {
-    masterToggle ? setMasterToggle(false) : masterToggle(true);
-  };
 
   const toggler = () => {
     toggle ? setToggle(false) : setToggle(true);
