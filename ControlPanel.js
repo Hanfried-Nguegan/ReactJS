@@ -4,31 +4,31 @@ import { Switch } from "antd";
 
 function ControlPanel({ props }) {
   const {
-    setToggleAlarm1,
-    setToggleAlarm2,
-    setToggleAlarm3,
-    setToggleAlarm4,
-    setToggleAlarm5,
-    setToggleAlarm6,
+    setToggleAlarms1,
+    setToggleAlarms2,
+    setToggleAlarms3,
+    setToggleAlarms4,
+    setToggleAlarms5,
+    setToggleAlarms6,
   } = props;
   const [toggle, setToggle] = useState(false);
 
   const toggler = () => {
     toggle ? setToggle(false) : setToggle(true);
     if (toggle === true) {
-      setToggleAlarm1(true) &&
-        setToggleAlarm2(true) &&
-        setToggleAlarm3(true) &&
-        setToggleAlarm4(true) &&
-        setToggleAlarm5(true) &&
-        setToggleAlarm6(true);
+      setToggleAlarms1(true) &&
+        setToggleAlarms2(true) &&
+        setToggleAlarms3(true) &&
+        setToggleAlarms4(true) &&
+        setToggleAlarms5(true) &&
+        setToggleAlarms6(true);
     } else {
-      setToggleAlarm1(false) &&
-        setToggleAlarm2(false) &&
-        setToggleAlarm3(false) &&
-        setToggleAlarm4(false) &&
-        setToggleAlarm5(false) &&
-        setToggleAlarm6(false);
+      setToggleAlarms1(false) &&
+        setToggleAlarms2(false) &&
+        setToggleAlarms3(false) &&
+        setToggleAlarms4(false) &&
+        setToggleAlarms5(false) &&
+        setToggleAlarms6(false);
     }
   };
   return (
