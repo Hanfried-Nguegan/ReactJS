@@ -1,10 +1,9 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import { Switch } from "antd";
 import { IoIosAperture } from "react-icons/io";
 
 export default function DisplayAlarms(props) {
-  const { alarmState } = props;
-  const { toggler } = props;
+  const { toggle } = props;
   const [toggleAlarms1, setToggleAlarms1] = useState(false);
   const [toggleAlarms2, setToggleAlarms2] = useState(false);
   const [toggleAlarms3, setToggleAlarms3] = useState(false);
@@ -35,32 +34,32 @@ export default function DisplayAlarms(props) {
     {
       id: 1,
       name: "Alarm 1",
-      togggle: <Switch checked={alarmState} onClick={alarm1Toggler} />,
+      togggle: <Switch checked={toggleAlarms1} onClick={alarm1Toggler} />,
     },
     {
       id: 2,
       name: "Alarm 2",
-      togggle: <Switch checked={alarmState} onClick={alarm2Toggler} />,
+      togggle: <Switch checked={toggleAlarms2} onClick={alarm2Toggler} />,
     },
     {
       id: 3,
       name: "Alarm 3",
-      togggle: <Switch checked={alarmState} onClick={alarm3Toggler} />,
+      togggle: <Switch checked={toggleAlarms3} onClick={alarm3Toggler} />,
     },
     {
       id: 4,
       name: "Alarm 4",
-      togggle: <Switch checked={alarmState} onClick={alarm4Toggler} />,
+      togggle: <Switch checked={toggleAlarms4} onClick={alarm4Toggler} />,
     },
     {
       id: 5,
       name: "Alarm 5",
-      togggle: <Switch checked={alarmState} onClick={alarm5Toggler} />,
+      togggle: <Switch checked={toggleAlarms5} onClick={alarm5Toggler} />,
     },
     {
       id: 6,
       name: "Alarm 6",
-      togggle: <Switch checked={alarmState} onClick={alarm6Toggler} />,
+      togggle: <Switch checked={toggleAlarms6} onClick={alarm6Toggler} />,
     },
   ];
   return (
