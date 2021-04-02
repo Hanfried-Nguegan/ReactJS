@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import DisplayAlarms from "./alarm";
 import { Switch } from "antd";
 
-function ControlPanel({ props }) {
+function ControlPanel(props) {
   const {
     setToggleAlarms1,
     setToggleAlarms2,
@@ -15,6 +15,8 @@ function ControlPanel({ props }) {
 
   const toggler = () => {
     toggle ? setToggle(false) : setToggle(true);
+  };
+  useEffect(() => {
     if (toggle === true) {
       setToggleAlarms1(true) &&
         setToggleAlarms2(true) &&
@@ -30,7 +32,8 @@ function ControlPanel({ props }) {
         setToggleAlarms5(false) &&
         setToggleAlarms6(false);
     }
-  };
+  }, [toggle]);
+
   return (
     <div className="controlpanel">
       <div className="alarm-toggles ">
